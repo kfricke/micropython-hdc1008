@@ -119,6 +119,3 @@ class HDC1008(object):
     def temp_humi(self, t_acc=CFG_TEMP_14BIT, h_acc=CFG_HUMI_14BIT):
         (raw_temp, raw_humi) = self._raw_temp_humi(t_acc, h_acc)
         return (((raw_temp / 65536) * 165) - 40, (raw_humi / 65536) * 100.0)
-
-    def serial(self):
-        return self.serial
